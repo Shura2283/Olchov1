@@ -456,8 +456,8 @@ html_code = """
 
   <!-- ASOSIY HEADER -->
   <header>
-    <div class="brand-title">📐 Matematika: O'lchov Birliklari</div>
-    <div class="author-badge">Tuzuvchi: Quljanova Shukurjon Zaribovna</div>
+    <div class="brand-title">📐 Matematika: O'lchov birliklari</div>
+    <div class="author-badge">Tuzuvchi: Urganch RANCH texnologiya universiteti "Raqamli texnologiyalar" kafedra o'qituvchisi Quljanova Shukurjon Zaribovna</div>
   </header>
 
   <div class="top-user-bar" id="topUserBar" style="display: none;">
@@ -486,7 +486,7 @@ html_code = """
 
     <section id="step2" class="step-section">
       <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; margin-bottom: 18px;">
-        <h2 class="section-title title-blue">📘 O'lchov Birliklari Qoidalari</h2>
+        <h2 class="section-title title-blue">📘 O'lchov birliklari qoidalari</h2>
         <span id="studentDisplay" style="font-weight: 700; color: var(--green);"></span>
       </div>
 
@@ -554,31 +554,31 @@ html_code = """
         </div>
       </div>
 
-      <button type="button" class="btn btn-green" onclick="goToStep(3)">Bilimni Tekshirish Mashqlari (50 ta savol) ➔</button>
+      <button type="button" class="btn btn-green" onclick="goToStep(3)">Bilimni Tekshirish mashqlari (50 ta savol) ➔</button>
     </section>
 
     <section id="step3" class="step-section">
-      <h2 class="section-title title-green">✍️ Bilimni Tekshirish: Jami 50 ta savol (10 ta Variant)</h2>
+      <h2 class="section-title title-green">✍️ Bilimni tekshirish: jami 50 ta savol (10 ta Variant)</h2>
       <p style="margin-bottom: 12px; color: #555;">Amaliy tekshirish variantini tanlang (har bir variantda 5 tadan savol):</p>
 
       <div class="variant-grid" id="practiceVariantButtons"></div>
 
       <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; flex-wrap: wrap; gap: 10px;">
-        <h3 id="currentPracticeVariantHeading" style="color: var(--green);">1-Variant Amaliy Savollari</h3>
+        <h3 id="currentPracticeVariantHeading" style="color: var(--green);">1-Variant Amaliy savollari</h3>
         <span id="practiceGradeBadge" style="font-weight: 800; font-size: 15px; color: var(--dark-blue);"></span>
       </div>
       
       <div id="practiceQuestionsContainer" style="max-width: 650px;"></div>
 
       <div style="margin-top: 20px; display: flex; gap: 10px; flex-wrap: wrap;">
-        <button type="button" class="btn btn-blue" onclick="checkCurrentPractice()">Javoblarni Tekshirish va Baholash</button>
-        <button type="button" class="btn btn-green" onclick="goToStep(4)">Yakuniy Testga O'tish ➔</button>
-        <button type="button" class="btn btn-outline" onclick="goToStep(2)">⬅ Qoidalarga Qaytish</button>
+        <button type="button" class="btn btn-blue" onclick="checkCurrentPractice()">Javoblarni tekshirish va baholash</button>
+        <button type="button" class="btn btn-green" onclick="goToStep(4)">Yakuniy Testga o'tish ➔</button>
+        <button type="button" class="btn btn-outline" onclick="goToStep(2)">⬅ Qoidalarga qaytish</button>
       </div>
     </section>
 
     <section id="step4" class="step-section">
-      <h2 class="section-title title-red">📝 Yakuniy Test Sinovi (10 ta variant, 100 ta savol)</h2>
+      <h2 class="section-title title-red">📝 Yakuniy test sinovi (10 ta variant, 100 ta savol)</h2>
       <p style="margin-bottom: 12px; color: #555;">Test variantini tanlang (ishlangan variantning ichi to'liq yashil bo'ladi):</p>
 
       <div class="variant-grid" id="testVariantButtons"></div>
@@ -588,14 +588,14 @@ html_code = """
         <div id="quizContainer"></div>
 
         <div style="margin-top: 20px; display: flex; gap: 12px; flex-wrap: wrap;">
-          <button type="button" class="btn btn-red" onclick="finishQuiz()">Testni Yakunlash va Excelga Saqlash ➔</button>
-          <button type="button" class="btn btn-outline" onclick="goToStep(3)">⬅ Mashqlarga Qaytish</button>
+          <button type="button" class="btn btn-red" onclick="finishQuiz()">Testni Yakunlash va Excelga saqlash ➔</button>
+          <button type="button" class="btn btn-outline" onclick="goToStep(3)">⬅ Mashqlarga qaytish</button>
         </div>
       </form>
     </section>
 
     <section id="step5" class="step-section">
-      <h2 class="section-title title-green">📊 Test Natijasi va Excel Jadvali</h2>
+      <h2 class="section-title title-green">📊 Test natijasi va Excel jadvali</h2>
 
       <div class="result-summary-card">
         <div class="summary-item">
@@ -607,28 +607,28 @@ html_code = """
           <div class="summary-val" id="resVariant">-</div>
         </div>
         <div class="summary-item">
-          <div class="summary-label">Bilimni Tekshirish Bahosi</div>
+          <div class="summary-label">Bilimni Tekshirish bahosi</div>
           <div class="summary-val" id="resPracticeGrade" style="color: var(--green);">-</div>
         </div>
         <div class="summary-item">
-          <div class="summary-label">Yakuniy Test Bahosi</div>
+          <div class="summary-label">Yakuniy Test bahosi</div>
           <div class="summary-val" id="resTestGrade" style="color: var(--blue);">-</div>
         </div>
       </div>
 
       <div style="display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 20px;">
         <button type="button" class="btn btn-excel" onclick="exportToExcel()">
-          📥 Excel (.xlsx) Faylga Yuklash
+          📥 Excel (.xlsx) Faylga yuklash
         </button>
         <label class="btn btn-outline" style="cursor: pointer; margin: 0;">
           📤 Excel Faylni Ochish (Import)
           <input type="file" id="excelFileInput" accept=".xlsx, .xls" style="display: none;" onchange="importFromExcel(event)">
         </label>
-        <button type="button" class="btn btn-green" onclick="goToStep(4)">🔄 Boshqa Variantni Ishlash</button>
+        <button type="button" class="btn btn-green" onclick="goToStep(4)">🔄 Boshqa variantni ishlash</button>
         <button type="button" class="btn btn-outline" onclick="clearResults()">Jurnalni Tozalash</button>
       </div>
 
-      <h3 style="color: var(--excel-header); margin-bottom: 10px;">📋 Tiniq Excel Qaydnomasi: Ikkala Baho Bir Qatorda</h3>
+      <h3 style="color: var(--excel-header); margin-bottom: 10px;">📋 Tiniq Excel qaydnomasi: Ikkala baho bir qatorda</h3>
       
       <div class="excel-table-wrapper">
         <table class="table-excel" id="excelReportTable">
@@ -639,9 +639,9 @@ html_code = """
               <th>O'quvchining F.I.SH</th>
               <th>Variant</th>
               <th>Bilimni Tekshirish (To'g'ri / Ball)</th>
-              <th>Bilimni Tekshirish Bahosi</th>
+              <th>Bilimni Tekshirish bahosi</th>
               <th>Yakuniy Test (To'g'ri / Ball)</th>
-              <th>Yakuniy Test Bahosi</th>
+              <th>Yakuniy Test bahosi</th>
               <th>Topshirilgan Vaqt</th>
             </tr>
           </thead>
@@ -652,7 +652,7 @@ html_code = """
   </main>
 
   <footer>
-    <p>O'lchov birliklari ta'limiy dasturi | <b>Tuzuvchi: Quljanova Shukurjon Zaribovna</b></p>
+    <p>O'lchov birliklari ta'limiy dasturi | <b>Tuzuvchi: Urganch RANCH texnologiya universiteti "Raqamli texnologiyalar" kafedrasi o'qituvchisi Quljanova Shukurjon Zaribovna</b></p>
   </footer>
 
   <script>
@@ -925,7 +925,7 @@ html_code = """
     }
 
     function renderPracticeQuestions(v) {
-      document.getElementById('currentPracticeVariantHeading').innerText = `${v}-Variant Amaliy Savollari (5 ta savol)`;
+      document.getElementById('currentPracticeVariantHeading').innerText = `${v}-Variant amaliy savollari (5 ta savol)`;
       document.getElementById('practiceGradeBadge').innerText = "";
       const container = document.getElementById('practiceQuestionsContainer');
       container.innerHTML = "";
@@ -1170,7 +1170,7 @@ html_code = """
       ];
 
       const workbook = XLSX.utils.book_new();
-      XLSX.utils.book_append_sheet(workbook, worksheet, "O'zlashtirish Qaydnomasi");
+      XLSX.utils.book_append_sheet(workbook, worksheet, "O'zlashtirish qaydnomasi");
 
       const fileName = `O'lchov_Birliklari_${currentUser.className || 'Umumiy'}_Baho_Qaydnomasi.xlsx`;
       XLSX.writeFile(workbook, fileName);
