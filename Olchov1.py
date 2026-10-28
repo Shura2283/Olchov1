@@ -5,26 +5,43 @@ import streamlit.components.v1 as components
 st.set_page_config(
     page_title="O'lchov Birliklari Ta'lim Platformasi",
     page_icon="📐",
-    layout="wide"
+    layout="wide",
+    initial_sidebar_state="collapsed"
 )
 
-# Streamlit bo'sh joylarini (padding) olib tashlash
+# Streamlit tepa qora paneli yozuvni to'sib qo'ymasligi uchun uslublar
 st.markdown(
     """
     <style>
-        .block-container {
-            padding-top: 1rem;
-            padding-bottom: 0rem;
-            padding-left: 1rem;
-            padding-right: 1rem;
+        /* Streamlitning standart tepa panelini yashirish yoki unga mos joy ochish */
+        header[data-testid="stHeader"] {
+            z-index: 1;
+            background: rgba(255, 255, 255, 0.95);
         }
-        footer {visibility: hidden;}
+        
+        /* Asosiy blokni tepadan pastroqqa tushirish */
+        .block-container {
+            padding-top: 3.8rem !important;
+            padding-bottom: 0rem !important;
+            padding-left: 0.5rem !important;
+            padding-right: 0.5rem !important;
+        }
+        
+        /* Streamlit pastki chizig'ini yashirish */
+        footer {
+            visibility: hidden;
+            display: none;
+        }
+        
+        iframe {
+            border: none !important;
+        }
     </style>
     """,
     unsafe_allow_html=True
 )
 
-# To'liq HTML, CSS va JS kodi
+# To'liq HTML dastur kodi
 html_code = """
 <!DOCTYPE html>
 <html lang="uz">
@@ -65,29 +82,34 @@ html_code = """
       flex-direction: column;
     }
 
+    /* Tepadan qo'shimcha bo'sh joy qoldirildi */
     header {
       background: var(--bg-white);
       border-bottom: 3px solid var(--blue);
       box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-      padding: 14px 24px;
+      padding: 16px 24px;
       display: flex;
       justify-content: space-between;
       align-items: center;
       flex-wrap: wrap;
       gap: 12px;
+      margin-top: 5px;
     }
 
     .brand-title {
-      font-size: 21px;
+      font-size: 22px;
       font-weight: 800;
       color: var(--blue);
+      display: flex;
+      align-items: center;
+      gap: 8px;
     }
 
     .author-badge {
       background: var(--light-blue);
       color: var(--dark-blue);
       border: 1.5px solid var(--blue);
-      padding: 5px 14px;
+      padding: 6px 16px;
       border-radius: 20px;
       font-size: 14px;
       font-weight: 700;
@@ -432,6 +454,7 @@ html_code = """
 </head>
 <body>
 
+  <!-- ASOSIY HEADER -->
   <header>
     <div class="brand-title">📐 Matematika: O'lchov Birliklari</div>
     <div class="author-badge">Tuzuvchi: Quljanova Shukurjon Zaribovna</div>
@@ -1206,5 +1229,5 @@ html_code = """
 </html>
 """
 
-# HTML komponentini to'liq hajmda ishga tushirish
-components.html(html_code, height=1350, scrolling=True)
+# HTML komponentini to'liq ko'rsatish
+components.html(html_code, height=1400, scrolling=True)
