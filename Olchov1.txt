@@ -1,2 +1,4 @@
+Bash
+pip install streamlit
 Plaintext
 streamlit
